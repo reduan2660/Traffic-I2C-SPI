@@ -1,0 +1,101 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information:  ,  , LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\red\Documents\Microcontroller\LAB3\I2C\slave\i2c.uvprojx
+Project File Date:  05/19/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling GPIO.c...
+compiling CLOCK.c...
+main.c(67): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                char udDetails[200];
+                     ^
+main.c(479): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                        uint32_t totalTime = G+Y+R;
+                                 ^
+main.c(368): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                GPIO_InitTypeDef PC15 = {13, GPIO_MODE_OUTPUT, GPIO_NOPULL, GPIO_SPEED_FREQ_LOW, GPIOC}; GPIO_Init(GPIOC, &PC15);
+                                 ^
+main.c(18): warning: unused variable 'global_time' [-Wunused-variable]
+static uint32_t global_time = 0;
+                ^
+main.c(20): warning: unused variable 'in_idx' [-Wunused-variable]
+static uint32_t in_idx,out_idx;
+                ^
+main.c(20): warning: unused variable 'out_idx' [-Wunused-variable]
+static uint32_t in_idx,out_idx;
+                       ^
+6 warnings generated.
+compiling main.c...
+compiling SYS_INIT.c...
+compiling USART.c...
+TRAFFIC_SYSTEM.c(128): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+^
+1 warning generated.
+compiling TRAFFIC_SYSTEM.c...
+I2C.c(173): warning: address of stack memory associated with local variable 'ret' returned [-Wreturn-stack-address]
+    return ret;
+           ^~~
+1 warning generated.
+compiling I2C.c...
+assembling startup_stm32f446xx.s...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=22196 RO-data=1888 RW-data=28 ZI-data=17984  
+".\Objects\i2c.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/red/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/red/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
