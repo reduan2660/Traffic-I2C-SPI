@@ -297,6 +297,7 @@ void TIM5Config(void){
 	
 }
 
+
 void tim5_delay(uint16_t ms){
 	ms = (uint16_t)2 * ms;
 	TIM5->CNT = 0;
@@ -351,10 +352,6 @@ int main(void)
 		
 		NVIC_SetPriority(USART2_IRQn, 1);
 		NVIC_EnableIRQ(USART2_IRQn);
-		NVIC_SetPriority(UART4_IRQn, 1);
-		NVIC_EnableIRQ(UART4_IRQn);
-		NVIC_SetPriority(UART5_IRQn, 1);
-		NVIC_EnableIRQ(UART5_IRQn);
 		
 		/* CLOCK ENABLE */
 		RCC->AHB1ENR |= 1; /* PORT A */
@@ -466,7 +463,8 @@ int main(void)
 		
 		while(1)
 		{
-			tim5_delay(1*1000);
+			//tim5_delay(1*1000);
+			I2C1->CR1 |= I2C_CR1_ACK;
 			
 			RefreshLoad(1, loadL, loadR, loadU, loadD, carL,carR, carU, carD);
 			
